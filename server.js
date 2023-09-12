@@ -1,23 +1,21 @@
 const express = require('express')
 const dotenv = require('dotenv')
-const logger = require('./middleware/logger')
-
-//Route files
-
-const households = require('./routes/households')
-
-// load env vars
+const db = require('./database/db')
+const morgan = require('morgan')
 dotenv.config({path:'./config/config.env'})
+
+const householdRoute = require('./routes/households')
     
 const app = express()
 
-// Mount routers
-app.use('/api/v1/households', households)
-
-// Body parser
 app.use(express.json())
 
-app.use(logger)
+// Dev logging middleware
+if(process.env.NODE_ENV === 'development' ) {
+    app.use(morgan('dev'))
+}
+
+app.use('/api/v1/households', householdRoute)
  
 const PORT = process.env.PORT || 5000
 const ENV = process.env.NODE_ENV 

@@ -1,0 +1,94 @@
+[
+    {
+        "houseType": "HDB",
+        "name": "Antony Thomas",
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "spouse": "Jessy Thomas",
+        "annualIncome": 80000,
+        "dob": "1972-01-27",
+        "occupationType": ["Employed"]
+    },
+    {
+        "houseType":"HDB",
+        "name": "Benita Thomas",
+        "gender": "Female",
+        "maritalStatus": "Married",
+        "spouse": "Antony Thomas",
+        "annualIncome": 25000,
+        "dob": "1980-01-20",
+        "occupationType": "Employed"
+    },
+    {
+        "houseType": "HDB",
+        "name": "Prince Andrews",
+        "gender": "Male",
+        "maritalStatus": "Unmarried",
+        "spouse": "",
+        "annualIncome": "",
+        "dob": "2005-03-11",
+        "occupationType": "Unemployed"
+    },
+    {
+        "houseType": "HDB",
+        "name": "Yani Thomas",
+        "gender": "Female",
+        "maritalStatus": "Unmarried",
+        "spouse": "",
+        "annualIncome": "",
+        "dob": "2007-11-27",
+        "occupationType": "Unemployed"
+    },
+    {
+        "houseType": "Condo",
+        "name": "Brad Tan",
+        "gender": "Male",
+        "maritalStatus": "Married",
+        "spouse": "Jasmin Tan",
+        "annualIncome": 120000,
+        "dob": "1975-05-13",
+        "occupationType": "Employed"
+
+    },
+    {
+        "houseType": "Condo",
+        "name": "Jasmin Tan",
+        "gender": "Female",
+        "maritalStatus": "Married",
+        "spouse": "Brad Tan",
+        "annualIncome": 70000,
+        "dob": "1979-01-18",
+        "occupationType": "Employed"
+    },
+    {
+        "houseType": "Condo",
+        "name": "Sarah Tan",
+        "gender": "Female",
+        "maritalStatus": "Unmarried",
+        "spouse": "",
+        "annualIncome": "",
+        "dob": "1979-01-18",
+        "occupationType": "Unemployed"
+    },
+    {
+        "houseType": "Condo",
+        "name": "Ba Tan",
+        "gender": "Female",
+        "maritalStatus": "Married",
+        "spouse": "Brad Tan",
+        "annualIncome": 70000,
+        "dob": "1979-01-18",
+        "occupationType": "Employed"
+    },
+    {
+        "houseType": "Condo",
+        "name": "Jasmin Tan",
+        "gender": "Female",
+        "maritalStatus": "Married",
+        "spouse": "Brad Tan",
+        "annualIncome": 70000,
+        "dob": "1979-01-18",
+        "occupationType": "Employed"
+    }
+
+]
