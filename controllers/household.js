@@ -1,31 +1,42 @@
 const Household = require('../models/Household')
+const db = require('../database/db')
 
 
+// const condoList = db.HouseholdDB.find({householdType: 'Condo'})
+// console.log(condoList)
 
 // @desc Get all households
 // @route POST /api/v1/households
 exports.createHousehold = async (req, res, next) =>{
+
     console.log(req.body)
-    try {
-        const response = await Household.create(req.Body)
+    
+    let household1 = new Household({
+        HouseholdType: req.body.HouseholdType,
+        FamilyMemembers: req.body.FamilyMemembers       
+    })
+
+    try { 
+        const household = await Household.create(household1)
+        console.log(household1)
         res.status(200).json({
             success: true,
-            data: response
+            data: household
         })
     } catch(err) {
         res.status(400).json({
             success:false,
-            msg: err.errors
+            msg: err
         })
     }
 }
+
 
 // @desc Get single households
 // @route GET /api/v1/households/:id
 exports.getHousehold = async(req, res, next) =>{
     try {
         const response = await Household.findById(req.params.id)
-
         if(!response) {
             return res.status(400).json({
                 success: false
@@ -40,8 +51,7 @@ exports.getHousehold = async(req, res, next) =>{
             success: false,
             msg: err
         })
-    }
-    
+    }    
 }
 
 
