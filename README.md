@@ -45,34 +45,26 @@ Then, run `npm start` to start the server.
 # Create household
     http://localhost:5000/api/v1/households
 
+# List households
+    http://localhost:5000/api/v1/households
+
 # Student encouragement bonus
     http://localhost:5000/api/v1/households/getStudentScheme
     
-    Request:
-    {
-        "HouseholdType": "Landed",	
-        "FamilyMembers": 
-        [
-        {"name":"Goh","gender": "Male","maritalStatus":"Married","spouse": "Janaki", "annualIncome": 120000,"dob":"1965/01/01","occupationType":"UnEmployed"}           
-        ]
-    }
-
-    Response:
-    {
-        "Scheme": "Student Encouragement Bonus Scheme",
-        "No Of Families": 2,
-        "Family Ids": [
-            "6501d54b6e80bf683f8af5f5",
-            "6501d8693fb82d2729f6cee1"
-        ]
-    }
-
 # Family togetherness scheme
     http://localhost:5000/api/v1/households/getFamilyTogethernessScheme
 
 # Elder Bonus
+    http://localhost:5000/api/v1/households/getElderBonusScheme
+
 # Baby Sunshine grant
+    http://localhost:5000/api/v1/households/getBabyShineScheme
+
 # YOLO GST Grant
+    http://localhost:5000/api/v1/households/getYoloGSTScheme
+
+# Delete household
+    http://localhost:5000/api/v1/households/6501f5f8ec4d4a175e086fdf
 
 ## Attached the Postman collection in Testscript Folder 
 

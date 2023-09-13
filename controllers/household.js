@@ -101,28 +101,10 @@ exports.deleteFamilyMemberByName = async(req, res, next) =>{
    }
 }
 
-// Age call
-function calculateAge(dateOfBirth) {
-    const dob = new Date(dateOfBirth);
-    const today = new Date();
-    const age = today.getFullYear() - dob.getFullYear();
-  
-    // Check if the birthday has occurred this year
-    if (today.getMonth() < dob.getMonth() || (today.getMonth() === dob.getMonth() && today.getDate() < dob.getDate())) {
-      return age - 1;
-    }
-  
-    return age;
-  }
-
-// Age call
-
 exports.getHouseholdsGroupBy = async (req, res, next) =>{    
-        try {  
-            
+        try {       
             const response = await Household.aggregate([
-                {      
-                   
+                {              
                     $project: {                        
                         totalIncome: { $sum: "$FamilyMembers.annualIncome"},
                         Age :{$max: "$FamilyMembers.dob"}
@@ -133,7 +115,6 @@ exports.getHouseholdsGroupBy = async (req, res, next) =>{
             response.forEach((elem) => {                                  
                   elem.Age = new AgeFromDateString(elem.Age).age;                
             });             
-
             res.status(200).json({
                 success: true,
                 count: response.length,
@@ -161,8 +142,8 @@ exports.getStudentScheme = async (req, res, next) =>{
                     DOB :"$FamilyMembers.dob"
                 }
             }
-        ])            
-        
+        ])      
+              
         const resultJson = []
 
         response.forEach((elem) => {            

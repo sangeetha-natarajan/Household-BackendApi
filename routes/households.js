@@ -4,8 +4,7 @@ const {
     getHousehold,
     getHouseholdsGroupBy,
     createHousehold,
-    deleteHousehold, 
-    getHouseholdsGroupByAge,
+    deleteHousehold,
     getStudentScheme,
     getFamilyTogethernessScheme,
     getElderBonusScheme,
@@ -26,9 +25,6 @@ router.route('/:id')
 
 router.route('/getHouseholdsGroupBy')
 .post(getHouseholdsGroupBy)
-
-router.route('/getHouseholdsGroupByAge')
-.post(getHouseholdsGroupByAge)
 
 router.route('/getStudentScheme')
 .post(getStudentScheme)

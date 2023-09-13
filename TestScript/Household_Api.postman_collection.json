@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "1fd0c9b6-b957-4c47-a3ad-b1033350dbea",
+		"name": "Household_Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25816501"
+	},
+	"item": [
+		{
+			"name": "getHouseholdsGroupBy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"HouseholdType\": \"Condo\",\t\r\n\t\"FamilyMembers\": \r\n\t  [\r\n      {\"name\":\"Karthik\",\"gender\": \"Male\",\"maritalStatus\":\"Married\",\"spouse\": \"Janaki\", \"annualIncome\": 120000,\"dob\":\"1980-01-01\",\"occupationType\":\"Employed\"},\r\n      {\"name\":\"Janaki\",\"gender\": \"Female\",\"maritalStatus\":\"Married\",\"spouse\": \"Karthik\", \"annualIncome\": 90000,\"dob\":\"1990-01-01\",\"occupationType\":\"Employed\"},\r\n      {\"name\":\"Prekit\",\"gender\": \"Male\",\"maritalStatus\":\"Single\",\"annualIncome\": 0,\"dob\":\"2007-01-01\",\"occupationType\":\"Student\"}           \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households/getHouseholdsGroupBy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households",
+						"getHouseholdsGroupBy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create households",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"HouseholdType\": \"Condo\",\r\n    \"FamilyMembers\": [\r\n    {\r\n        \"name\": \"John\",\r\n        \"gender\": \"Male\",\r\n        \"maritalStatus\": \"Married\",\r\n        \"spouse\": \"Daliya\",\r\n        \"annualIncome\": 80000,\r\n        \"dob\": \"1985-01-01\",\r\n        \"occupationType\": \"Employed\"\r\n    },\r\n    {\r\n        \"name\": \"Daliya\",\r\n        \"gender\": \"Female\",\r\n        \"maritalStatus\": \"Married\",\r\n        \"spouse\": \"John\",\r\n        \"annualIncome\": 76000,\r\n        \"dob\": \"1990-01-01\",\r\n        \"occupationType\": \"Employed\"\r\n    },\r\n    {\r\n        \"name\": \"Sarah \",\r\n        \"gender\": \"Female\",\r\n        \"maritalStatus\": \"Single\",\r\n        \"annualIncome\": 0,\r\n        \"dob\": \"2007-01-01\",\r\n        \"occupationType\": \"Student\"\r\n    },\r\n    {\r\n        \"name\": \"Bharath\",\r\n        \"gender\": \"Male\",\r\n        \"maritalStatus\": \"Single\",\r\n        \"annualIncome\": 0,\r\n        \"dob\": \"2013-01-01\",\r\n        \"occupationType\": \"Student\"\r\n    },\r\n    {\r\n        \"name\": \"Angel\",\r\n        \"gender\": \"Female\",\r\n        \"maritalStatus\": \"Single\",\r\n        \"annualIncome\": 0,\r\n        \"dob\": \"2015-01-01\",\r\n        \"occupationType\": \"Student\"\r\n    }\r\n]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get households",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student scheme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"HouseholdType\": \"Landed\",\t\r\n\t\"FamilyMembers\": \r\n\t  [\r\n      {\"name\":\"Goh\",\"gender\": \"Male\",\"maritalStatus\":\"Married\",\"spouse\": \"Janaki\", \"annualIncome\": 120000,\"dob\":\"1965/01/01\",\"occupationType\":\"UnEmployed\"}           \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households/getStudentScheme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households",
+						"getStudentScheme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFamilyTogethernessScheme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"HouseholdType\": \"Landed\",\t\r\n\t\"FamilyMembers\": \r\n\t  [\r\n      {\"name\":\"Goh\",\"gender\": \"Male\",\"maritalStatus\":\"Married\",\"spouse\": \"Janaki\", \"annualIncome\": 120000,\"dob\":\"1965/01/01\",\"occupationType\":\"UnEmployed\"}           \r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households/getFamilyTogethernessScheme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households",
+						"getFamilyTogethernessScheme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ElderBonusScheme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households/getElderBonusScheme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households",
+						"getElderBonusScheme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BabyShineScheme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households/getBabyShineScheme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households",
+						"getBabyShineScheme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletehousehold",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households/6501f5f8ec4d4a175e086fdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households",
+						"6501f5f8ec4d4a175e086fdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "YoloGSTScheme",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/households/getYoloGSTScheme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"households",
+						"getYoloGSTScheme"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
