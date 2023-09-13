@@ -1,27 +1,27 @@
 {
-    "HouseholdType": "HDB",
-"FamilyMemember": [
+    "HouseholdType": "Condo",
+    "FamilyMembers": [
     {
-        "name": "Ari",
+        "name": "John",
         "gender": "Male",
         "maritalStatus": "Married",
-        "spouse": "Sangee",
-        "annualIncome": 12000,
-        "dob": "1980-01-01",
+        "spouse": "Daliya",
+        "annualIncome": 80000,
+        "dob": "1985-01-01",
         "occupationType": "Employed"
     },
     {
-        "name": "Sangeetha",
+        "name": "Daliya",
         "gender": "Female",
         "maritalStatus": "Married",
-        "spouse": "",
-        "annualIncome": 12000,
+        "spouse": "John",
+        "annualIncome": 76000,
         "dob": "1990-01-01",
         "occupationType": "Employed"
     },
     {
-        "name": "Saru",
-        "gender": "Male",
+        "name": "Sarah ",
+        "gender": "Female",
         "maritalStatus": "Single",
         "annualIncome": 0,
         "dob": "2007-01-01",
@@ -32,15 +32,14 @@
         "gender": "Male",
         "maritalStatus": "Single",
         "annualIncome": 0,
-        "dob": "2009-01-01",
+        "dob": "2013-01-01",
         "occupationType": "Student"
     },
     {
-        "name": "Ari",
-        "gender": "Male",
-        "maritalStatus": "Married",
-        "spouse": "Sangee",
-        "annualIncome": 12000,
+        "name": "Angel",
+        "gender": "Female",
+        "maritalStatus": "Single",
+        "annualIncome": 0,
         "dob": "2015-01-01",
         "occupationType": "Student"
     }

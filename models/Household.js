@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 
-const TestSchema = new mongoose.Schema({
+const HouseholdSchema = new mongoose.Schema({
     "HouseholdType": {
         "type": "String"
       },
-      "FamilyMemembers": {
+      "FamilyMembers": {
         "type": [
           "Mixed"
         ]
@@ -13,5 +13,5 @@ const TestSchema = new mongoose.Schema({
   }
 )
 
-const Household = mongoose.model('Household', TestSchema)
+const Household = mongoose.model('Household', HouseholdSchema)
 module.exports = Household
