@@ -4,9 +4,14 @@ const {
     getHousehold,
     getHouseholdsGroupBy,
     createHousehold,
-    updateHousehold,
     deleteHousehold, 
-    getHouseholdsGroupByAge
+    getHouseholdsGroupByAge,
+    getStudentScheme,
+    getFamilyTogethernessScheme,
+    getElderBonusScheme,
+    getBabyShineScheme,
+    getYoloGSTScheme    
+    
 } = require('../controllers/household')
 
 const router = express.Router()
@@ -17,13 +22,29 @@ router.route('/')
 
 router.route('/:id')
 .get(getHousehold)
-.put(updateHousehold)
 .delete(deleteHousehold)
-
 
 router.route('/getHouseholdsGroupBy')
 .post(getHouseholdsGroupBy)
+
 router.route('/getHouseholdsGroupByAge')
 .post(getHouseholdsGroupByAge)
+
+router.route('/getStudentScheme')
+.post(getStudentScheme)
+
+router.route('/getFamilyTogethernessScheme')
+.post(getFamilyTogethernessScheme)
+
+router.route('/getElderBonusScheme')
+.post(getElderBonusScheme)
+
+router.route('/getBabyShineScheme')
+.post(getBabyShineScheme)
+
+router.route('/getYOLOGSTScheme')
+.post(getYoloGSTScheme)
+
+
 
 module.exports = router
