@@ -1,4 +1,43 @@
 # Backend api with mongodb
+
+# MongoDB setup:
+
+For Macbook
+
+Install MongoDB Community Edition
+
+1. install homebrew from this cmd
+
+       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+2.
+        brew tap mongodb/brew
+
+3.      brew update
+
+5.      brew install mongodb-community@7.0
+   
+
+6. MongoDB Database Tools can be downloaded from here
+        https://www.mongodb.com/try/download/database-tools
+
+7. MongoDB shell 
+            https://downloads.mongodb.com/compass/mongosh-1.10.6-darwin-x64.zip
+
+8.  MongoDB Compass GUI download package from here
+            https://www.mongodb.com/try/download/compass
+
+To run MongoDB (i.e. the mongod process) as a macOS service, run:
+
+9.       brew services start mongodb-community@7.0
+
+
+To stop a mongod running as a macOS service, use the following command as needed:
+
+10.	      brew services stop mongodb-community@7.0
+
+
+
 # Operations
 This repository contains a simple CRUD (Create, Read, Update, Delete) application using MongoDB as the database.
 And it covers the below business logics of a Householding
